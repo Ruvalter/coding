@@ -9,17 +9,37 @@
       height: 50px;
       font-size: 18px;
     }
+     #desligada{
+      position:absolute;
+    
+    }
   </style>
   <script>
 
     function alertInputValue() {
-      var value = document.getElementById('minha-id').value
-      alert(value)
+      var valor = document.getElementById('minha-id').value
+      alert(valor)
+    }
+    function ligaLampada() {
+      document.all.ligada.style.visibility="visible";
+      document.all.desligada.style.visibility="hidden";
+      
+    }
+     function desligaLampada() {
+      document.all.ligada.style.visibility="hidden";
+      document.all.desligada.style.visibility="visible";
+      
     }
   </script>
 </head>
-<body>
-  <input type="text" id="minha-id">
-  <input type="button" id="botao" onclick="alertInputValue()" value="Botao">
+<body>'
+  <img id="desligada" src="bulb_PNG1243.png">
+  <img id="ligada" src="Yellow Light Bulb-512x512.png" style="visibility:hidden">
+
+  <!-- <input type="text" id="minha-id"> /*
+
+  <input type="button" id="botao" onclick="alertInputValue()" value="Botao"> -->
+  <input type="button" id="botao2" onclick="ligaLampada()" value="Ligar">
+  <input type="button" id="botao3" onclick="desligaLampada()" value="Desligar">
 </body>
 </html>
