@@ -4,28 +4,30 @@
   <meta charset="UTF-8">
   <title>Imc</title>
   <link href="css/Stylesheet.css" rel="stylesheet">
-  <script type="text/javascript">
-
-  	function alertInputValue() {
-      var valor1 = document.getElementById('peso').value
-      var valor2 = document.getElementById('altura').value
-      alert(valor1/(valor2*valor2))
-    }
-
-  </script>
-
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-lg-4 col-centered">
+        <h1>Cálculo do IMC</h1>
 
-<h1>Cálculo do IMC</h1>
+        <form id="form">
+          <p>Insira o valor do seu peso (em quilos):</p>
+          <input type="text" id="peso" class="form-control" placeholder="Peso">
+          <p>Insira o valor da sua altura (em metros) :</p>
+          <input type="text" id="altura" class="form-control" placeholder="Altura">
+          <p> </p>
+          <input type="button" id="botao" onclick="alertInputValue()" value="Calcular" class="btn btn-block btn-orange">
+        </form>
+        <hr class="my-margin">
 
-<p>Insira o valor do seu peso (em quilos):</p>
-<input type="text" id="peso">
-<p>Insira o valor da sua altura (em metros) :</p>
-<input type="text" id="altura">
-<p> </p>
-<input type="button" id="botao" onclick="alertInputValue()" value="Calcular">
+        <div id="result" class="result">
 
-
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
