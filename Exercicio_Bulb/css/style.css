@@ -1,0 +1,21 @@
+/*#minha-id {
+  border-radius: 9px;
+  height: 50px;
+  font-size: 18px;
+}
+ #desligada{
+  position:absolute;
+
+}*/
+
+.content {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#my-button {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
