@@ -13,13 +13,13 @@
       <div class="col-lg-4 col-centered">
         <h1>Cálculo do IMC</h1>
 
-        <form id="form">
+        <form id="form" onsubmit="return alertInputValue()">
           <p>Insira o valor do seu peso (em quilos):</p>
           <input type="text" id="peso" class="form-control" placeholder="Peso">
           <p>Insira o valor da sua altura (em metros) :</p>
           <input type="text" id="altura" class="form-control" placeholder="Altura">
           <p> </p>
-          <input type="button" id="botao" onclick="alertInputValue()" value="Calcular" class="btn btn-block btn-orange">
+          <input type="submit" id="botao" value="Calcular" class="btn btn-block btn-orange">
         </form>
         <hr class="my-margin">
 
