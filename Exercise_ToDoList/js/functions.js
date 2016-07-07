@@ -35,11 +35,13 @@ function showTask() {
 
 	var taskList = ""
 	for (var i = 0; i < taskArray.length; i++) {
-		taskList +=  "<li class='list-group-item'>" + taskArray[i].name +"<span class='date'>"+ taskArray[i].date + "</span></li>"
-	}
+		// taskList +=  "<li class='list-group-item'>" + taskArray[i].name +"<span class='date'>"+ taskArray[i].date + "</span></li>"
+	  taskList +=  "<tr>" + "<td>" + "<input type='checkbox'>" + "</td>" + "<td>" + taskArray[i].name + "</td>" + "<td>" + taskArray[i].date + "</td>" + "<td class='date'>" + "<button>o o o</button>" + "</td>" + "</tr>"
+  
+  }
 	
-    document.getElementById("toDoList").innerHTML = taskList
-
+    // document.getElementById("toDoList").innerHTML = taskList
+    document.getElementById("toDoTable").innerHTML = taskList
 
 }
 
