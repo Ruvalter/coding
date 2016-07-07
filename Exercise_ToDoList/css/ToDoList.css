@@ -1,0 +1,85 @@
+p {
+  font-size: 16px;
+}
+
+.form-control {
+  margin-top: -4px;
+
+}
+
+.row-centered {
+  text-align: center;
+}
+
+.row-centered .col-centered {
+  display: inline-block;
+  float: none;
+  text-align: left;
+  margin-right: -4px;
+  margin-top: -4px;
+
+}
+.row-centered .col-centered h1 {
+  
+  margin-top: 80px;
+  
+}
+
+ul {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+li {
+
+  border: 1px solid #ccc;
+  background-color: #999;
+  padding: 5px 10px;
+  color:#000;
+
+}
+
+.row-centered .col-centered p {
+  
+  margin-top: 10px;
+  text-align: left;
+  
+}
+
+.col-centered h1, p {
+  text-align: center;
+}
+
+.btn-orange {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+.btn-orange:hover {
+  background-color: #0047b3;
+  color: #ffffff;
+}
+
+.my-margin {
+  margin: 20px 50px;
+}
+
+.result_name {
+  text-align: left;
+  font-size: 16px;
+}
+
+.result_due {
+  text-align: right;
+  font-size: 12px;
+}
+
+.date {
+  float: right;
+}
+
+
+

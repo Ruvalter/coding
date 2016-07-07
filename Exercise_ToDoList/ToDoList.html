@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/ToDoList.css" rel="stylesheet">
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body onload="showTask()">
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-lg-4 col-centered">
+        <h1>To Do List Manager</h1>
+
+        <form id="form" onsubmit="return CreatNewTask()">
+          <p>Task name:</p>
+          <input type="text" id="task_name" class="form-control" placeholder="Task Name">
+          <p>Due date:</p>
+          <input type="text" id="due_date" class="form-control" placeholder="Due Date">
+          <p> </p>
+          <input type="submit" id="botao" value="Insert task" class="btn btn-block btn-orange">
+        </form>
+        <hr class="my-margin">
+        <h3>Task list</h3>
+
+        <ul id="toDoList" class="list-group">       
+
+
+        </ul>
+
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
