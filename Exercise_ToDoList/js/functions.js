@@ -13,13 +13,13 @@ function CreatNewTask() {
    var value1 = document.getElementById('task_name').value
    var value2 = document.getElementById('due_date').value
  
-   if (dateVerify()) {
+   if (isNaN(value1)) {
 
       var task = {
        name: value1,
        date: value2
       }
-
+    
       taskArray.push(task)
 
       document.getElementById('task_name').value = ""
