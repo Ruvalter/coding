@@ -5,15 +5,19 @@
   <title>To Do List</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/ToDoList.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/sweetalert.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/sweetalert.min.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
 </head>
-<body onload="showTask()">
+<body>
   <div class="container">
     <div class="row row-centered">
       <div class="col-lg-4 col-centered">
         <h1>To Do List Manager</h1>
 
-        <form id="form" onsubmit="return CreatNewTask()">
+        <form id="form">
           <p>Task name:</p>
           <input type="text" id="task_name" class="form-control" placeholder="Task Name">
           <p>Due date:</p>
@@ -23,9 +27,9 @@
         </form>
         <hr class="my-margin">
         <h3>Task list table</h3>
-        
 
-        <ul id="toDoList" class="list-group">       
+
+        <ul id="toDoList" class="list-group">
 
 
         </ul>
@@ -33,11 +37,11 @@
         <div class="panel panel-default">
           <div class="panel-heading"><h4>Task List Heading</h4></div>
             <table id="toDoTable" class="table">
-             
+
             </table>
         </div>
 
-        
+
       </div>
     </div>
   </div>

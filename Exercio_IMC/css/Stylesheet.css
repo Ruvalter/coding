@@ -2,6 +2,9 @@ p {
   font-size: 18px;
 }
 
+
+
+
 .row-centered {
   text-align: center;
 }
@@ -11,8 +14,21 @@ p {
   float: none;
   text-align: left;
   margin-right: -4px;
+
 }
 
+.row-centered .col-centered p {
+  
+  margin-top: 10px;
+  text-align: left;
+  
+}
+
+.row-centered .col-centered h1 {
+  
+  margin-top: 100px;
+  
+}
 .col-centered h1, p {
   text-align: center;
 }
@@ -31,4 +47,5 @@ p {
 
 #result {
   text-align: center;
+  font-size: 18px;
 }
