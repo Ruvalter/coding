@@ -1,9 +1,22 @@
 $(document).ready(function ()  {
 
+  $('#toDoTable').sortable({
+    items: '> tr',
+    group: 'simple_with_animation',
+    pullPlaceHolder: false,
+    helper: 'clone'
+  })
+
+  $("#toDoTable").disableSelection()
+
   var taskArray = [
     {
       name: "tarefa1",
       date: "data1"
+    },
+    {
+      name: 'Tarefa 2',
+      date: "data2"
     }
   ]
 
@@ -52,7 +65,7 @@ $(document).ready(function ()  {
     var taskList = ""
     for (var i = 0; i < taskArray.length; i++) {
       // taskList +=  "<li class='list-group-item'>" + taskArray[i].name +"<span class='date'>"+ taskArray[i].date + "</span></li>"
-      taskList +=  "<tr>" + "<td>" + "<input type='checkbox' class='done'>" + "</td>" + "<td class='task_style'>" + taskArray[i].name + "</td>" + "<td class='task_style'>" + taskArray[i].date + "</td>" + "<td class='date'>" + "<button class='btn btn-danger'><i class='fa fa-bars' aria-hidden='true'></i></button>" + "</td>" + "</tr>"
+      taskList +=  "<tr class='sortable-dragging'>" + "<td>" + "<input type='checkbox' class='done'>" + "</td>" + "<td class='task_style'>" + taskArray[i].name + "</td>" + "<td class='task_style'>" + taskArray[i].date + "</td>" + "<td class='date'>" + "<button class='btn btn-danger'><i class='fa fa-bars' aria-hidden='true'></i></button>" + "</td>" + "</tr>"
     }
 
     // document.getElementById("toDoList").innerHTML = taskList

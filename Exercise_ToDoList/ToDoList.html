@@ -8,6 +8,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/sweetalert.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
   <script type="text/javascript" src="js/sweetalert.min.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
 </head>
@@ -36,8 +37,8 @@
 
         <div class="panel panel-default">
           <div class="panel-heading"><h4>Task List Heading</h4></div>
-            <table id="toDoTable" class="table">
-
+            <table class="table sortable-placeholder">
+              <tbody id="toDoTable"></tbody>
             </table>
         </div>
 
