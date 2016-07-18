@@ -1,49 +1,69 @@
+$(document).ready(function ()  {
 
-var taskArray = [
-	{
-		name: "tarefa1",
-		date: "data1"
-	}
+  var taskArray = [
+    {
+      name: "tarefa1",
+      date: "data1"
+    }
+  ]
+
+  showTask()
+
+  $("#form").on("submit", function() {
+
+    var value1 = $("#task_name").val()
+    var value2 = $("#due_date").val()
 
 
-] 
+    if (isNaN(value1)) {
 
-function CreatNewTask() {
+        var task = {
+         name: value1,
+         date: value2
+        }
+        // coloca os novos valores no final do vetor
+        taskArray.push(task)
 
-   var value1 = document.getElementById('task_name').value
-   var value2 = document.getElementById('due_date').value
- 
-   if (isNaN(value1)) {
+        $("#task_name").val("")
+        $("#due_date").val("")
 
-      var task = {
-       name: value1,
-       date: value2
-      }
-    
-      taskArray.push(task)
+        showTask()
+     }
 
-      document.getElementById('task_name').value = ""
-      document.getElementById('due_date').value = ""
-      showTask()
-   }
+    return false
+  })
 
-   
-  return false
-}
+  $(".done").click(function() {
+    debugger
+    swal({
+      title: "Good Job",
+      text: "You have concluded another one!",
+      timer: 2000,
+      showConfirmButton: false
+    })
 
-function showTask() {
 
-	var taskList = ""
-	for (var i = 0; i < taskArray.length; i++) {
-		// taskList +=  "<li class='list-group-item'>" + taskArray[i].name +"<span class='date'>"+ taskArray[i].date + "</span></li>"
-	  taskList +=  "<tr>" + "<td>" + "<input type='checkbox'>" + "</td>" + "<td>" + taskArray[i].name + "</td>" + "<td>" + taskArray[i].date + "</td>" + "<td class='date'>" + "<button>o o o</button>" + "</td>" + "</tr>"
-  
-  }
-	
+
+
+  })
+
+  function showTask() {
+
+    var taskList = ""
+    for (var i = 0; i < taskArray.length; i++) {
+      // taskList +=  "<li class='list-group-item'>" + taskArray[i].name +"<span class='date'>"+ taskArray[i].date + "</span></li>"
+      taskList +=  "<tr>" + "<td>" + "<input type='checkbox' class='done'>" + "</td>" + "<td class='task_style'>" + taskArray[i].name + "</td>" + "<td class='task_style'>" + taskArray[i].date + "</td>" + "<td class='date'>" + "<button class='btn btn-danger'><i class='fa fa-bars' aria-hidden='true'></i></button>" + "</td>" + "</tr>"
+    }
+
     // document.getElementById("toDoList").innerHTML = taskList
-    document.getElementById("toDoTable").innerHTML = taskList
+    $("#toDoTable").html(taskList)
+  }
+})
 
-}
+
+
+
+
 
 
 function dateVerify() {

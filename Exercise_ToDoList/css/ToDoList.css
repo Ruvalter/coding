@@ -20,9 +20,9 @@ p {
 
 }
 .row-centered .col-centered h1 {
-  
+
   margin-top: 80px;
-  
+
 }
 
 ul {
@@ -43,10 +43,10 @@ li {
 }
 
 .row-centered .col-centered p {
-  
+
   margin-top: 10px;
   text-align: left;
-  
+
 }
 
 .col-centered h1, p {
@@ -78,7 +78,11 @@ li {
 }
 
 .date {
-  float: right;
+  text-align: right;
+}
+
+.table .task_style {
+  vertical-align: middle;
 }
 
 
