@@ -53,6 +53,7 @@ var animals = [
 //   type: 'Rabbit',
 //   value: 89.99
 // }
+
 // var rabbit = new Animal(data)
 
 // rabbit.description()
@@ -65,54 +66,92 @@ function Animal (data) {
     this.value = data.value
 
     this.description = function () {
-        console.log("I am", this.name, "and I am a", this.type)
+      console.log("I am", this.name, "and I am a", this.type)
     }
 }
 
-var data = animals[0]
+// var data = animals[3]
 
-var rabbit = new Animal(data)
-rabbit.description()
+// var rabbit = new Animal(animals[3])
+// var cat1 = new Animal(animals[1])
+// var cat2 = new Animal(animals[0])
+// var dog = new Animal(animals[2])
 
 
+
+
+
+//olhar o map
 
 // 2 - Criar uma classe Zoo, que tem um metodo getAnimal que deve receber um animal como argumento e
 // adicioná-lo em um vetor de animais que ele possui.
 
 
-var animalss = new Array ()
-  animalss[0] = "dog";
-  animalss[1] = "Cat";
 
-console.log(animalss)
+function Zoo () {
+  this.animals = []
+  this.getAnimal = function (newAnimal) {
+    this.animals.push(newAnimal)
+  }
+  this.showValues = function () {
+    var totalSum = 0
+    this.animals.forEach(function (animal){
+      totalSum += animal.value
+    })
+    return totalSum
+  }
+  this.showByCategories = function (category) {
+    var filteredAnimals = this.animals.filter(function(animal){
+      return category.toLowerCase() == animal.type.toLowerCase()
+    })
 
-animalss[2] = "rabbit"
+    //operador ternário (apenas para ifs simples)
+    return filteredAnimals.length == 0 ? "Nenhum animal nesta categoria" : filteredAnimals.length
 
-console.log(animalss)
+    //javaScript funcional
+    // if (filteredAnimals.length == 0) {
+    //   return "Nenhum animal nesta categoria"
+    // }
 
-var ind = animalss.length
 
-function Zoo (animalss) {
-  this.getAnimal = function (teste) {
-  animalss[ind++] = teste
-  console.log(animalss)
+    //javaScript padrão
+    // var totalBycategory = 0
+    // this.animals.forEach(function (animal){
+    //   if (category.toLowerCase() == animal.type.toLowerCase()) {
+    //     totalBycategory += 1
+    //   }
+    // })
+    // if (totalBycategory == 0) {
+    //   return "Nenhum animal nesta categoria"
+    // }
+    // return totalBycategory
   }
 }
 
-var sheep = new Zoo(animalss)
-sheep.getAnimal("sheep")
-
-var pig = new Zoo(animalss)
-pig.getAnimal("pig")
-
+// var zoo = new Zoo()
+// zoo.getAnimal(rabbit)
+// zoo.getAnimal(dog)
+// zoo.getAnimal(cat1)
 
 
+//instanciando
+var result = animals.map(function (item) {
+  return new Animal(item)
+})
 
+result.forEach(function (item) {
+  zoo.getAnimal(item)
+})
+
+
+
+console.log(zoo)
 
 
 // 3 - Deve também ter um método showValues que deve
 // mostrar o valor total da somatoria dos animais.
 
+console.log(zoo.showValues())
 
 
 // 4 - Deve também possuir um método que deve mostrar
@@ -120,33 +159,25 @@ pig.getAnimal("pig")
 // deve se filtrar por categoria escrita. Se ela não existir, mostrar mensagem de erro, e se não for
 // dado nenhuma categoria, mostrar de todos:
 
-// var zoo = new Zoo()
+console.log(zoo.showByCategories("cat"))
 
-// zoo.getAnimal(rabbit)
 
-// zoo.showValues()
 
-// => The zoo has animals on total of 89.99 $
+
 
 // zoo.showByCategories()
 
 // => Rabbit: 1
 
-// 5 - Criar na classe zoo um metodo que retorna somente o nome dos animais que possui.
 
 
-// Usando o Node.js para interpretar o codigo.
 
-// Abrr terminal
-// acessar a pasta do arquivo
-// escrever "node nome-arquivo"
+// 5 - Criar na classe zoo um metodo animalsNames que retorna somente o nome dos animais que possui. (usar o map)
 
 
 
 
-
-
-
+console.log(zoo)
 
 
 
