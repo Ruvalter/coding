@@ -9,6 +9,7 @@
   <link href="css/sweetalert.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="js/sweetalert.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
@@ -26,7 +27,7 @@
           <input type="submit" id="botao" value="Insert task" class="btn btn-block btn-orange">
         </form>
         <hr class="my-margin">
-        <h3>Task list table</h3>
+        <h3><i class="fa fa-check-square" aria-hidden="true"> Task list table</i></h3>
 
 
         <ul id="toDoList" class="list-group">
@@ -37,6 +38,7 @@
         <div class="panel panel-default">
           <div class="panel-heading"><h4>Task List Heading</h4></div>
             <table id="toDoTable" class="table">
+              <tbody class="sortable"></tbody>
 
             </table>
         </div>
