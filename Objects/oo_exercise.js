@@ -104,31 +104,18 @@ function Zoo () {
     var filteredAnimals = this.animals.filter(function(animal){
       return category.toLowerCase() == animal.type.toLowerCase()
     })
-
     //operador ternário (apenas para ifs simples)
     return filteredAnimals.length == 0 ? "Nenhum animal nesta categoria" : filteredAnimals.length
-
-    //javaScript funcional
-    // if (filteredAnimals.length == 0) {
-    //   return "Nenhum animal nesta categoria"
-    // }
-
-
-    //javaScript padrão
-    // var totalBycategory = 0
-    // this.animals.forEach(function (animal){
-    //   if (category.toLowerCase() == animal.type.toLowerCase()) {
-    //     totalBycategory += 1
-    //   }
-    // })
-    // if (totalBycategory == 0) {
-    //   return "Nenhum animal nesta categoria"
-    // }
-    // return totalBycategory
+  }
+  this.animalName = function () {
+    var animalNames = this.animals.map(function(item){
+      return item.name
+    })
+    return animalNames
   }
 }
 
-// var zoo = new Zoo()
+var zoo = new Zoo()
 // zoo.getAnimal(rabbit)
 // zoo.getAnimal(dog)
 // zoo.getAnimal(cat1)
@@ -145,13 +132,15 @@ result.forEach(function (item) {
 
 
 
-console.log(zoo)
+//console.log(zoo)
 
 
 // 3 - Deve também ter um método showValues que deve
 // mostrar o valor total da somatoria dos animais.
 
 console.log(zoo.showValues())
+
+//reduce
 
 
 // 4 - Deve também possuir um método que deve mostrar
@@ -177,7 +166,7 @@ console.log(zoo.showByCategories("cat"))
 
 
 
-console.log(zoo)
+console.log(zoo.animalName())
 
 
 
